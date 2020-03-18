@@ -1,0 +1,24 @@
+spring:
+  profiles:
+    active:
+      - dev
+---
+server: 8201
+spring:
+  profiles: dev  #开发环境
+  application:
+    name: microservicecloud-config-atguigu-dev
+eureka:
+  client:
+    server-url:
+      defaultZone: http://eureka-dev.com:7001/eureka/
+---
+server: 8202
+spring:
+  profiles: test  #开发环境
+  application:
+    name: microservicecloud-config-atguigu-dev
+eureka:
+  client:
+    server-url:
+      defaultZone: http://eureka-test.com:7001/eureka/
